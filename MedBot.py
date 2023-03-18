@@ -29,7 +29,7 @@ def save_new_diagnosis(name,diagnosis):
 
 def assess_eyes(eyes):
     if eyes == "1":
-      return no_dehydraiton
+      return some_dehydration
     elif eyes == "2":
      return severe_dehydration
     else:
@@ -38,7 +38,7 @@ def assess_eyes(eyes):
 
 def assess_skin(skin):
     if skin == "1":
-      return no_dehydraiton
+      return some_dehydration
     elif skin == "2":
      return severe_dehydration
     else:
@@ -77,3 +77,20 @@ def main():
 
 
 main()
+
+#Unit Tests
+def test_assess_eyes(): 
+   print(assess_eyes("1") == some_dehydration)
+   print(assess_eyes("2") == severe_dehydration)
+   print(assess_eyes("") == "")
+
+#Unit Tests
+def test_assess_skin(): 
+   print(assess_skin("1") == some_dehydration)
+   print(assess_skin("2") == severe_dehydration)
+   print(assess_skin("") == "")
+
+#test_assess_eyes()
+#test_assess_skin()
+
+
